@@ -6,9 +6,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class NegativeLoginTest {
-    BrcPage brcPage=new BrcPage();
+    BrcPage brcPage;
     @Test
     public void yanlisSifre() {
+       brcPage =new BrcPage();
         // Bir test method olustur positiveLoginTest()
         //		 https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
