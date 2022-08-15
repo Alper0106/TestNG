@@ -7,9 +7,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 public class C03_PositiveLoginTestiRaporlu extends TestBaseRapor {
-    BrcPage brcPage=new BrcPage();
+    BrcPage brcPage;
+
     @Test
     public void positiveLoginTest() {
+        brcPage =new BrcPage();
         extentTest=extentReports.createTest("Pozitif Login","Gecerli username ve sifre ile giris yapabilmeli");
         // Bir test method olustur positiveLoginTest()
         //       https://www.bluerentalcars.com/ adresine git
@@ -22,7 +24,7 @@ public class C03_PositiveLoginTestiRaporlu extends TestBaseRapor {
         brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcValidEmail"));
         extentTest.info("Gecerli email yazildi");
         // test data password : 12345
-        brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
+        brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcValidPassword"));
         extentTest.info("Gecerli password yazildi");
         // login butonuna tiklayin
         brcPage.ikinciLoginButonu.click();
