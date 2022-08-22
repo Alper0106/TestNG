@@ -37,6 +37,7 @@ public class C02_SoftAssertCross extends TestBaseCross {
         ve class'in kalan kismi calistirilmaz
         (Yani assertAll hardAsserdeki her bir assert gibidir, hatayi yakalarsa calisma durur)
          */
+        //dir
         System.out.println("assertion'lardan fail olan olursa, burasi calismaz");
     }
 }
